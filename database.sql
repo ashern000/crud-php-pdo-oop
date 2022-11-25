@@ -1,0 +1,9 @@
+CREATE DATABASE `crudOopPdo`;
+USE DATABASE `crudOopPdo`;
+
+CREATE TABLE `users_tb`(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(220) NOT NULL,
+    userAddress VARCHAR(220) NOT NULL,
+    userYear INT NOT NULL
+);
