@@ -1,8 +1,10 @@
 <?php
 
+# Inclusion of classes
+
 include "./classCrud.php";
 
-$new = new Users();
+$new = new Users("root", "localhost", "", "dbname");
 $all = $new->read();
 
 ?>
@@ -32,15 +34,18 @@ $all = $new->read();
             <div class="col-10 text-center">
                 <table class="table">
                     <thead>
+
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
                             <th scope="col">Years</th>
                             <th scope="col">Actions</th>
                         </tr>
+                        
                     </thead>
 
                     <tbody>
+
                         <?php
             foreach ($all as $key => $val) { ?>
                         <tr>
@@ -59,6 +64,7 @@ $all = $new->read();
                                     class="btn btn-primary text-white">Update</a></td>
                         </tr>
                         <?php ; } ?>
+
                     </tbody>
                 </table>
             </div>
